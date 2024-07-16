@@ -1,0 +1,41 @@
+
+/*
+ * What is the purpose of the service class
+ * Service class used to collect data from more than DAO class
+ * from different DataAccessObjects Like : if you three DAO
+ * one for EmployeeDAO , SkillsDAO and PayrollDAO
+ * via Single service you could collect data from these three DAOs
+ * very simple ===> to pass all data collected from these three DAOs
+ * and give the RESTController single view from these three Classes
+ * RestController -> service -> DAOClass -> DB
+ *
+ * When using ===> @Service
+ * Spring will automatically register the Service  implementation
+ * thanks to component-scanning
+ *  هتحتاج انك تعرف ال DAO لل service من خلال ال injection
+ *
+ *
+ * */
+
+
+/*
+ *------------------- This is the service layer --------------------
+ * You may have more than DAO package for alot of different Entities
+ * but you will neeed to make single service interface and its implementationn
+ * to use all different DAO packages for different entities
+ *
+ * ---------- The best benefit here is shift the @Transaction to Service layer -------
+ * ------------------------------------------------------------------
+ * */
+/*
+ *------------------- This is the service layer --------------------
+ * You may have more than DAO package for alot of different Entities
+ * but you will neeed to make single service interface and its implementationn
+ * to use all different DAO packages for different entities
+ *
+ * ---------- The best benefit here is shift the @Transaction to Service layer -------
+ * ---------- You would make simple delegation ===> This Service class will be delegated to call other DAO
+ * ---------- And it used the Transactional Annotation --------------
+ * ------------------------------------------------------------------
+ * */
+
